@@ -38,19 +38,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 48px;display:fl
 .hero::before{display:none;}
 .hero-inner{width:100%;display:grid;grid-template-columns:1fr 1fr;align-items:center;}
 .hero-left{min-width:0;padding:80px 52px 80px 52px;background:var(--bg);}
-.method-badge{display:inline-block;padding:10px 28px;margin-bottom:16px;animation:fadeUp 0.7s ease both;max-width:100%;position:relative;}
+.method-badge{display:inline-block;padding:10px 28px;margin-bottom:16px;animation:fadeUp 0.7s ease both;max-width:100%;position:relative;background:var(--dark);border:1px solid rgba(255,255,255,0.28);border-radius:2px;}
 .method-badge::before,.method-badge::after{content:'';position:absolute;inset:0;pointer-events:none;}
-/* "Broken box" frame (open sides) */
-.method-badge::before{
-  background:
-    /* top left segment */ linear-gradient(var(--ink),var(--ink)) left top/46% 1.5px no-repeat,
-    /* top right segment */ linear-gradient(var(--ink),var(--ink)) right top/46% 1.5px no-repeat,
-    /* bottom left segment */ linear-gradient(var(--ink),var(--ink)) left bottom/46% 1.5px no-repeat,
-    /* bottom right segment */ linear-gradient(var(--ink),var(--ink)) right bottom/46% 1.5px no-repeat,
-    /* left vertical segment */ linear-gradient(var(--ink),var(--ink)) left center/1.5px 100% no-repeat,
-    /* right vertical segment */ linear-gradient(var(--ink),var(--ink)) right center/1.5px 100% no-repeat;
-}
-.method-title{font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:700;color:var(--ink);letter-spacing:1px;line-height:1;white-space:nowrap;}
+/* Remove decorative "broken box" ordering lines */
+.method-badge::before{display:none;}
+.method-title{font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:700;color:var(--white);letter-spacing:1px;line-height:1;white-space:nowrap;}
 .hero-eyebrow{font-family:'Montserrat',sans-serif;font-size:8px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:var(--gold);margin-bottom:26px;animation:fadeUp 0.7s ease both;}
 .hero-headline{font-family:'Cormorant Garamond',serif;font-size:clamp(40px,5vw,66px);font-weight:600;line-height:1.1;color:var(--ink);margin-bottom:26px;animation:fadeUp 0.7s 0.1s ease both;}
 .hero-headline em{font-style:italic;color:var(--gold);}
@@ -464,7 +456,7 @@ footer{background:var(--dark);padding:56px 48px;}
 </nav>
 <div class="nav-menu" id="navMenu">
   <a href="https://tidycal.com/darrentebbenham/diagnostic" onclick="toggleMenu()">Book a Diagnostic Call</a>
-  <a href="profile/" onclick="toggleMenu()">Take the 2.0 Profile Test</a>
+  <a href="https://profile.dt.coach/" onclick="toggleMenu()">Take the 2.0 Profile Test</a>
 </div>
 
 <!-- HERO -->
@@ -479,7 +471,7 @@ footer{background:var(--dark);padding:56px 48px;}
       <p class="hero-sub">This isn't about information. You have enough of that. It's about the part of you that already knows what to do — <strong>and doesn't.</strong> Understanding why that gap exists, and closing it permanently, is what the 2.0 Method was built to do.</p>
       <div class="hero-actions">
         <a href="https://tidycal.com/darrentebbenham/diagnostic" class="btn-gold">Book a Diagnostic Call</a>
-        <a href="profile/" class="btn-outline">Take the 2.0 Profile Test</a>
+        <a href="https://profile.dt.coach/" class="btn-outline">Take the 2.0 Profile Test</a>
       </div>
     </div>
     <div class="hero-right">
@@ -606,7 +598,7 @@ footer{background:var(--dark);padding:56px 48px;}
       </div>
     </div>
     <div class="pattern-cta-row reveal">
-      <a href="profile/" class="btn-ink-outline">Discover Your Pattern — Take the Free 2.0 Profile →</a>
+      <a href="https://profile.dt.coach/" class="btn-ink-outline">Discover Your Pattern — Take the Free 2.0 Profile →</a>
       <div class="pattern-cta-note">13 questions · 5 minutes · Your full psychological profile</div>
     </div>
   </div>
@@ -1017,7 +1009,7 @@ footer{background:var(--dark);padding:56px 48px;}
       <div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;color:var(--muted);margin-bottom:32px;line-height:1.6;">"When biology is on your side, consistency stops being a personality trait<br>and becomes the natural result."</div>
       <div class="cta-buttons">
         <a href="https://tidycal.com/darrentebbenham/diagnostic" class="btn-gold">Book a Diagnostic Call</a>
-        <a href="profile/" class="btn-outline">Take the Free 2.0 Profile First</a>
+        <a href="https://profile.dt.coach/" class="btn-outline">Take the Free 2.0 Profile First</a>
       </div>
       <p class="cta-small">Calls typically available within 2–3 weeks. If you're considering it, book now.</p>
       <div class="cta-what">
