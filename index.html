@@ -37,9 +37,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 48px;display:fl
 .hero{min-height:100vh;display:flex;align-items:stretch;padding:0;position:relative;}
 .hero::before{display:none;}
 .hero-inner{width:100%;display:grid;grid-template-columns:1fr 1fr;align-items:center;}
-.hero-left{min-width:0;padding:108px 52px 80px 52px;background:var(--bg);}
+.hero-left{min-width:0;padding:80px 52px 80px 52px;background:var(--bg);}
 .hero-eyebrow{font-family:'Montserrat',sans-serif;font-size:8px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:var(--gold);margin-bottom:26px;animation:fadeUp 0.7s ease both;}
-.hero-headline{font-family:'Cormorant Garamond',serif;font-size:clamp(34px,3.9vw,52px);font-weight:600;line-height:1.1;color:var(--ink);margin-bottom:22px;animation:fadeUp 0.7s 0.1s ease both;}
+.hero-headline{font-family:'Cormorant Garamond',serif;font-size:clamp(34px,3.5vw,46px);font-weight:600;line-height:1.1;color:var(--ink);margin-bottom:22px;animation:fadeUp 0.7s 0.1s ease both;}
 .hero-headline em{font-style:italic;color:var(--gold);}
 .hero-sub{font-size:16px;line-height:1.85;color:var(--muted);margin-bottom:44px;max-width:480px;animation:fadeUp 0.7s 0.18s ease both;}
 .hero-sub strong{color:var(--ink);font-weight:700;}
@@ -48,15 +48,15 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 48px;display:fl
 .btn-gold:hover{background:var(--gold);transform:translateY(-2px);}
 .btn-outline{display:inline-flex;align-items:center;justify-content:center;text-align:center;gap:10px;background:transparent;color:var(--ink);font-family:'Montserrat',sans-serif;font-size:8px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:17px 28px;min-width:220px;border:1px solid var(--ink);cursor:pointer;transition:all 0.25s;text-decoration:none;}
 .btn-outline:hover{background:var(--ink);color:var(--cream);}
-.hero-right{padding:80px 52px 80px 48px;background:var(--dark);min-width:0;}
+.hero-right{padding:48px 52px 80px 48px;background:var(--dark);min-width:0;}
 .hero-right .eyebrow-light{font-family:'Montserrat',sans-serif;font-size:8px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:var(--gold-light);margin-bottom:28px;}
 .credential-name{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:600;color:var(--cream);margin-bottom:4px;}
-.credential-quals{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:500;color:var(--gold-light);margin-bottom:4px;letter-spacing:1px;}
+.credential-quals{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:500;color:var(--gold-light);margin-bottom:12px;letter-spacing:1px;}
 .credential-title{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:400;letter-spacing:0.5px;color:rgba(250,247,242,0.65);margin-bottom:28px;}
-.credential-list{list-style:none;margin-bottom:36px;}
+.credential-list{list-style:none;margin-bottom:16px;}
 .credential-list li{font-family:'Montserrat',sans-serif;font-size:12px;font-weight:400;color:rgba(250,247,242,0.82);padding:10px 0;border-bottom:1px solid rgba(255,255,255,0.08);display:flex;align-items:flex-start;gap:12px;line-height:1.6;}
 .credential-list li::before{content:'—';color:var(--gold-light);flex-shrink:0;margin-top:1px;}
-.hero-quote{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:21px;color:var(--gold-light);line-height:1.6;padding-top:28px;border-top:1px solid rgba(255,255,255,0.12);}
+.hero-quote{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:21px;color:var(--gold-light);line-height:1.6;padding-top:14px;border-top:1px solid rgba(255,255,255,0.12);}
 
 /* SECTIONS */
 section{padding:96px 48px;}
@@ -140,7 +140,7 @@ section{padding:96px 48px;}
 .rs-label{font-family:'Montserrat',sans-serif;font-size:9px;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
 .rs-name{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:700;color:var(--cream);margin-bottom:12px;}
 .rs-desc{font-size:13px;line-height:1.8;color:rgba(250,247,242,0.78);}
-.rs-note{font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:600;color:var(--gold);line-height:1.7;font-style:italic;}
+.rs-note{font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:600;color:var(--white);line-height:1.7;font-style:italic;}
 
 /* QUESTION STACK */
 .question-stack-section{background:var(--dark);padding:80px 48px;}
@@ -311,7 +311,7 @@ footer{background:var(--dark);padding:56px 48px;}
 @media(max-width:920px){
   nav{padding:14px 20px;}
   section{padding:64px 20px;}
-  .hero{padding:96px 20px 56px;}
+  .hero{padding:60px 0 0;}
   .hero::before{display:none;}
   .hero-inner,.problem-grid,.outcome-grid,.bs-grid,.prog-cards,.forwho-cols,
   .pattern-cards,.qs-grid,.switch-cards,.cta-what,.about-inner{grid-template-columns:1fr;}
@@ -323,7 +323,7 @@ footer{background:var(--dark);padding:56px 48px;}
   .footer-inner{grid-template-columns:1fr;text-align:center;}
   .footer-right{text-align:center;}
   .hero-right{padding:36px 28px;background:var(--dark);border-radius:0;}
-  .hero-inner{padding:0 20px;}
+  .hero-inner{padding:0;}
   .hero::before{display:none;}
   .pull-quote-section .pq-inner{grid-template-columns:1fr;}
   /* Fix inline-style pull quote grids */
@@ -338,11 +338,12 @@ footer{background:var(--dark);padding:56px 48px;}
   nav .nav-cta{display:none;}
   .nav-hamburger{display:flex;}
   section{padding:52px 16px;}
-  .hero-left{padding:32px 20px 40px 20px;}
+  .hero-left{padding:12px 20px 40px 20px;}
+  .hero-left p{font-size:14px !important;}
   .hero-right{padding:40px 20px 56px 20px;}
 
   /* Typography scale-down for mobile */
-  .hero-headline{font-size:clamp(30px,8vw,44px) !important;font-weight:700 !important;line-height:1.1;}
+  .hero-headline{font-size:clamp(42px,10.5vw,54px) !important;font-weight:700 !important;line-height:1.15;white-space:normal;max-width:72%;padding-right:20px;}
   .problem-headline,.patterns-headline,.framework-headline,
   .prog-headline,.outcome-headline,.switch-headline,
   .forwho-headline,.cta-headline,.qs-headline{font-size:clamp(26px,7vw,38px) !important;line-height:1.2;}
@@ -424,6 +425,9 @@ footer{background:var(--dark);padding:56px 48px;}
 
   /* Buttons — full width on mobile */
   .hero-actions{flex-direction:column;gap:12px;}
+  .btn-gold,.btn-outline{font-size:9px !important;letter-spacing:1.5px !important;padding:16px 20px !important;white-space:nowrap !important;}
+  .two-books-header{font-size:10px !important;}
+  .bs-tier-label{font-size:14px !important;}
   .btn-gold,.btn-outline{width:100%;justify-content:center;padding:16px 20px;}
   .cta-buttons{flex-direction:column;align-items:center;}
 
@@ -431,7 +435,8 @@ footer{background:var(--dark);padding:56px 48px;}
   .prog-note{font-size:12px;}
 
   /* Credential list */
-  .credential-list li{font-size:10px;}
+  .credential-list li{font-size:14px;}
+  .credential-title{font-size:15px !important;}
 
   /* Prog card featured badge */
   .prog-card.featured::before{font-size:6px;padding:4px 10px;}
@@ -456,12 +461,10 @@ footer{background:var(--dark);padding:56px 48px;}
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-left">
-      <div style="display:inline-block;background:var(--ink);padding:10px 28px;margin-bottom:16px;animation:fadeUp 0.7s ease both;">
-        <div style="font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:700;color:var(--cream);letter-spacing:1px;line-height:1;">The <span style="color:var(--gold);">2.0</span> Method</div>
-      </div>
-      <p style="font-family:'Libre Baskerville',Georgia,serif;font-size:15px;line-height:1.75;color:var(--muted);margin-bottom:20px;max-width:480px;animation:fadeUp 0.7s 0.05s ease both;">Most weight loss programmes address the behaviour. The 2.0 Method addresses what's running it.</p>
-      <h1 class="hero-headline">Willpower, motivation,<br>and being strong-minded<br><em>won't fix this.</em><br>Here's why.</h1>
-      <a href="https://profile.dt.coach" class="btn-gold" style="margin-bottom:28px;animation:fadeUp 0.7s 0.2s ease both;background:var(--gold);color:var(--white);">Take the 2.0 Profile Test</a>
+      <div style="font-family:'Cormorant Garamond',serif;font-size:clamp(52px,9vw,84px);font-weight:700;line-height:0.92;color:var(--ink);margin-bottom:16px;animation:fadeUp 0.7s ease both;">The <span style="color:var(--gold);">2.0</span> Method</div>
+      <p style="font-family:'Libre Baskerville',Georgia,serif;font-size:18px;line-height:1.75;color:var(--muted);margin-bottom:20px;max-width:640px;animation:fadeUp 0.7s 0.05s ease both;">Most weight loss programmes address the behaviour. The 2.0 Method addresses what's running it.</p>
+      <h1 class="hero-headline">Intelligence and hard work won't fix this problem.<br><em>Here's why.</em></h1>
+      <a href="https://profile.dt.coach" class="btn-gold" style="margin-bottom:28px;animation:fadeUp 0.7s 0.2s ease both;background:var(--gold);color:var(--white);position:relative;overflow:hidden;font-size:11px;padding:22px 40px;min-width:0;width:100%;max-width:380px;letter-spacing:2px;white-space:nowrap;" onmouseover="this.style.background='#151412';this.style.color='#c9a55a';this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 24px rgba(168,129,58,0.35)'" onmouseout="this.style.background='#a8813a';this.style.color='#ffffff';this.style.transform='translateY(0)';this.style.boxShadow='none'">Take the 2.0 Profile Test &nbsp;→</a>
       <p class="hero-sub">This isn't about information. You have enough of that. It's about the part of you that already knows what to do — <strong>and doesn't.</strong> Understanding why that gap exists, and closing it permanently, is what the 2.0 Method was built to do.</p>
       <div class="hero-actions">
         <a href="https://tidycal.com/darrentebbenham/diagnostic" class="btn-gold">Book a Diagnostic Call</a>
@@ -472,14 +475,13 @@ footer{background:var(--dark);padding:56px 48px;}
       <div class="eyebrow-light">Your Coach</div>
       <div class="credential-name">Darren Tebbenham</div>
       <div class="credential-quals">BSc, MSc</div>
-      <div class="credential-title">Behaviour Change Coach · Author · Former University Lecturer</div>
+      <div class="credential-title">Inside-Out Transformation Coach · The Psychology & Biology of Permanent Weight Loss</div>
       <ul class="credential-list">
-        <li>BSc and MSc in sport and exercise science and psychology</li>
-        <li>Three years lecturing exercise psychology to degree-level / post-graduate students</li>
-        <li>15+ years training personal trainers and coaches worldwide — 3,000+ trained</li>
-        <li>Author — The Psychology of Weight Loss & The Biology of Weight Loss</li>
-        <li>Two decades at the intersection of applied psychology and behaviour change</li>
-        <li>Clinical experience with obesity, type 2 diabetes, and complex cases</li>
+        <li>Former University Lecturer</li>
+        <li>BSc &amp; MSc Sport and Exercise Psychology</li>
+        <li>15+ years training personal trainers — 3,000+ worldwide</li>
+        <li>Author — The Psychology and the Biology of Weight Loss</li>
+        <li>Two decades at the intersection of applied psychology &amp; behaviour change in both professional and clinical settings</li>
       </ul>
       <div class="hero-quote">"Progress isn't lost in the slip. It's lost in the story you tell yourself afterwards."</div>
     </div>
@@ -498,7 +500,7 @@ footer{background:var(--dark);padding:56px 48px;}
           <p>Every programme you've tried has addressed the behaviour. The plan. The protocol. The willpower. None of them addressed what was running the behaviour underneath.</p>
           <p>That's not your failure. It's the failure of an entire industry solving the wrong problem for decades. <strong>Weight loss is not just an exercise and nutrition problem. It's a psychological one.</strong></p>
           <p>The behaviour is the symptom. The pattern is the cause. And the pattern lives in a part of the brain that logic, discipline, and calorie tracking simply cannot reach.</p>
-          <p>Until you address that layer — the patterns, the identity, the blind spots — every plan will eventually fail. Not because you're not trying hard enough. Because you're using the wrong tool for the wrong problem.</p>
+          <p>Until you address that layer — the patterns, the identity, the blind spots...every plan will eventually fail. Not because you're not trying hard enough. Because you're using the wrong tool for the wrong problem.</p>
         </div>
       </div>
       <div class="problem-right reveal">
@@ -519,7 +521,7 @@ footer{background:var(--dark);padding:56px 48px;}
 <div class="pull-quote-section">
   <div style="max-width:1100px;margin:0 auto;">
     <div style="text-align:center;margin-bottom:40px;" class="reveal">
-      <div style="font-family:'Montserrat',sans-serif;font-size:8px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:var(--gold);">Two Books · One Method · One Truth</div>
+      <div class="two-books-header" style="font-family:'Montserrat',sans-serif;font-size:8px;font-weight:600;letter-spacing:5px;text-transform:uppercase;color:var(--gold);">Two Books · One Method · One Truth</div>
     </div>
     <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;" class="reveal">
       <div class="pq-item" style="border-top:2px solid var(--gold);">
@@ -667,7 +669,7 @@ footer{background:var(--dark);padding:56px 48px;}
         <div class="rs-name">The Rewrite</div>
         <div class="rs-desc">Reprogramming the autopilot. Installing new identity-based habits at the level of the automatic brain — so that the change becomes who you are, not what you're trying to do. This is where "easy and effortless" is actually built. When the psychology and biology are finally aligned, fat loss becomes possible again — not through effort but through congruence.</div>
       </div>
-      <div class="rs-note">"Consistency becomes who you are — not something you do."<br>— The Biology of Weight Loss</div>
+      <div class="rs-note">"Consistency becomes who you are — not something you do."<br>— The Psychology of Weight Loss</div>
     </div>
   </div>
 </section>
@@ -719,19 +721,19 @@ footer{background:var(--dark);padding:56px 48px;}
       <div class="bs-right reveal">
         <div class="bs-tiers">
           <div>
-            <div class="bs-tier-label">Surface Blind Spots · Visible with help</div>
+            <div class="bs-tier-label">Surface Blind Spots</div>
             <div class="bs-items">
-              <div class="bs-item"><div class="bs-n">1</div><div><div class="bs-text">Expecting transformation from minimal effort</div><div class="bs-sub">A little effort, a lot of hope. The gap between input and expectation is where most people quietly give up.</div></div></div>
-              <div class="bs-item"><div class="bs-n">2</div><div><div class="bs-text">Ready-made excuses loaded before the situation arrives</div><div class="bs-sub">These aren't spontaneous justifications. The excuse is constructed in advance and deployed automatically.</div></div></div>
-              <div class="bs-item"><div class="bs-n">3</div><div><div class="bs-text">Real obstacles used to justify staying stuck</div><div class="bs-sub">The reasons are real. But they're being used in a way that makes change impossible.</div></div></div>
+              <div class="bs-item"><div class="bs-n">1</div><div><div class="bs-name" style="font-family:'Montserrat',sans-serif;font-size:8px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:4px;">The Effort Gap</div><div class="bs-text">Expecting transformation from minimal effort</div><div class="bs-sub">A little effort, a lot of hope. The gap between input and expectation is where most people quietly give up.</div></div></div>
+              <div class="bs-item"><div class="bs-n">2</div><div><div class="bs-name" style="font-family:'Montserrat',sans-serif;font-size:8px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:4px;">The Pre-Load</div><div class="bs-text">Ready-made excuses loaded before the situation arrives</div><div class="bs-sub">These aren't spontaneous justifications. The excuse is constructed in advance and deployed automatically.</div></div></div>
+              <div class="bs-item"><div class="bs-n">3</div><div><div class="bs-name" style="font-family:'Montserrat',sans-serif;font-size:8px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:4px;">The Real Obstacle</div><div class="bs-text">Real obstacles used to justify staying stuck</div><div class="bs-sub">The reasons are real. But they're being used in a way that makes change impossible.</div></div></div>
             </div>
           </div>
           <div>
-            <div class="bs-tier-label">Deep Blind Spots · Require real work to surface</div>
+            <div class="bs-tier-label">Deep Blind Spots</div>
             <div class="bs-items">
-              <div class="bs-item"><div class="bs-n">4</div><div><div class="bs-text">Self-talk as the hidden narrator running everything</div><div class="bs-sub">The voice underneath the voice. It runs the pattern before the conscious mind can intervene. Awareness is the first intervention.</div></div></div>
-              <div class="bs-item"><div class="bs-n">5</div><div><div class="bs-text">Barriers interpreted as permanent character flaws</div><div class="bs-sub">The most damaging belief of all. It mislocates the problem entirely — and ensures it can never be solved from where it's being looked at.</div></div></div>
-              <div class="bs-item"><div class="bs-n">6</div><div><div class="bs-text">Using food to cope — conditioning, not weakness</div><div class="bs-sub">Food is one of the fastest ways to change how you feel. When you understand this is conditioning, not character, the shame disappears. The work becomes management.</div></div></div>
+              <div class="bs-item"><div class="bs-n">4</div><div><div class="bs-name" style="font-family:'Montserrat',sans-serif;font-size:8px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:4px;">The Hidden Narrator</div><div class="bs-text">Self-talk as the hidden narrator running everything</div><div class="bs-sub">The voice underneath the voice. It runs the pattern before the conscious mind can intervene. Awareness is the first intervention.</div></div></div>
+              <div class="bs-item"><div class="bs-n">5</div><div><div class="bs-name" style="font-family:'Montserrat',sans-serif;font-size:8px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:4px;">The Character Flaw</div><div class="bs-text">Barriers interpreted as permanent character flaws</div><div class="bs-sub">The most damaging belief of all. It mislocates the problem entirely — and ensures it can never be solved from where it's being looked at.</div></div></div>
+              <div class="bs-item"><div class="bs-n">6</div><div><div class="bs-name" style="font-family:'Montserrat',sans-serif;font-size:8px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:4px;">The Conditioning</div><div class="bs-text">Using food to cope — conditioning, not weakness</div><div class="bs-sub">Food is one of the fastest ways to change how you feel. When you understand this is conditioning, not character, the shame disappears. The work becomes management.</div></div></div>
             </div>
           </div>
         </div>
@@ -795,7 +797,7 @@ footer{background:var(--dark);padding:56px 48px;}
       <div class="eyebrow-light">About Darren</div>
       <div class="about-name">Darren<br>Tebbenham</div>
       <div class="about-quals">BSc, MSc</div>
-      <div class="about-subtitle">Behaviour Change Coach · Author · Former University Lecturer</div>
+      <div class="about-subtitle">Inside-Out Transformation Coach · The Psychology & Biology of Permanent Weight Loss</div>
       <div class="about-body">
         <p>I spent the first part of my career in education — studying sport and exercise psychology to Masters level, then lecturing it to degree-level student teachers for three years. <strong>Teaching the psychology of how people change</strong> before ever applying it in a coaching room.</p>
         <p>The last twenty years have been entirely applied. Training personal trainers and coaches around the world. Working directly with clients at every level of complexity — from people who've simply never found an approach that works, to clinical cases involving obesity, type 2 diabetes, and post-bariatric support.</p>
@@ -810,17 +812,22 @@ footer{background:var(--dark);padding:56px 48px;}
         <li>Personal trainer and nutrition coach — two decades of direct client work</li>
         <li>Trained 3,000+ personal trainers and coaches across the UK and internationally</li>
         <li>Clinical experience: obesity, type 2 diabetes, bariatric pre and post-surgery</li>
-        <li>Two published books on the psychology and biology of weight loss</li>
+        <li>Author of two books as well as published research articles</li>
       </ul>
       <div class="about-book">
-        <div class="ab-label">The Book</div>
+        <div class="ab-label">Book One</div>
         <div class="ab-title">The Psychology of Weight Loss</div>
         <div class="ab-sub">A real-life guide to weight loss that works with your brain, not against it. Available free at dt.coach/psychology — the foundation of everything in the 2.0 Method.</div>
       </div>
       <div class="about-book" style="margin-top:12px;">
+        <div class="ab-label">Book Two</div>
+        <div class="ab-title">The Biology of Weight Loss</div>
+        <div class="ab-sub">The biological counterpart to the psychology. Covering insulin control, fat fuel, nourishment over deprivation, and why the body has been working against you — and how to change that. Available free at dt.coach/psychology.</div>
+      </div>
+      <div class="about-book" style="margin-top:12px;">
         <div class="ab-label">The Podcast</div>
         <div class="ab-title">Clarity · Vision · Focus</div>
-        <div class="ab-sub">A three-part series that takes you through the complete psychological journey — from honest self-awareness to a vivid future self to the habits that make it permanent. Free. Available wherever you listen.</div>
+        <div class="ab-sub">A three-part series taking you through the complete psychological journey. Free. Available wherever you listen.</div>
       </div>
     </div>
   </div>
@@ -960,7 +967,7 @@ footer{background:var(--dark);padding:56px 48px;}
     <div class="reveal">
       <div class="eyebrow light">Who This Is For</div>
       <div class="rule-gold"></div>
-      <h2 class="forwho-headline">The 2.0 Method is for people<br>who are <em>done with outside-in.</em></h2>
+      <h2 class="forwho-headline">The 2.0 Method is for people who are <em>done with outside-in.</em></h2>
     </div>
     <div class="forwho-cols reveal">
       <div class="forwho-col yes">
@@ -1019,7 +1026,7 @@ footer{background:var(--dark);padding:56px 48px;}
     <div class="footer-left">
       <strong>Darren Tebbenham</strong>
       <span class="quals">BSc, MSc</span>
-      Behaviour Change Coach · Author<br>
+      Inside-Out Transformation Coach · The Psychology & Biology of Permanent Weight Loss<br>
       Former University Lecturer<br>
       Trainer of 3,000+ Coaches Worldwide
     </div>
