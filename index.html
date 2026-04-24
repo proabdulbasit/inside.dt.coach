@@ -44,6 +44,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:18px 48px;display:fl
 .hero-sub{font-size:16px;line-height:1.85;color:var(--muted);margin-bottom:44px;max-width:480px;animation:fadeUp 0.7s 0.18s ease both;}
 .hero-sub strong{color:var(--ink);font-weight:700;}
 .hero-actions{display:flex;gap:14px;flex-wrap:wrap;animation:fadeUp 0.7s 0.25s ease both;}
+.mobile-gold-rule{display:none;}
 .btn-gold{display:inline-flex;align-items:center;justify-content:center;text-align:center;gap:10px;background:var(--ink);color:var(--cream);font-family:'Montserrat',sans-serif;font-size:8px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:17px 28px;min-width:220px;border:none;cursor:pointer;transition:all 0.25s;text-decoration:none;}
 .btn-gold:hover{background:var(--gold);transform:translateY(-2px);}
 .btn-outline{display:inline-flex;align-items:center;justify-content:center;text-align:center;gap:10px;background:transparent;color:var(--ink);font-family:'Montserrat',sans-serif;font-size:8px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:17px 28px;min-width:220px;border:1px solid var(--ink);cursor:pointer;transition:all 0.25s;text-decoration:none;}
@@ -343,7 +344,7 @@ footer{background:var(--dark);padding:56px 48px;}
   .hero-right{padding:40px 20px 56px 20px;}
 
   /* Typography scale-down for mobile */
-  .hero-headline{font-size:clamp(42px,10.5vw,54px) !important;font-weight:700 !important;line-height:1.15;white-space:normal;max-width:72%;padding-right:20px;}
+  .hero-headline{font-size:clamp(42px,10.5vw,54px) !important;font-weight:700 !important;line-height:1.15;white-space:normal;max-width:82%;padding-right:12px;}
   .problem-headline,.patterns-headline,.framework-headline,
   .prog-headline,.outcome-headline,.switch-headline,
   .forwho-headline,.cta-headline,.qs-headline{font-size:clamp(26px,7vw,38px) !important;line-height:1.2;}
@@ -385,14 +386,14 @@ footer{background:var(--dark);padding:56px 48px;}
   /* Pull quote grids */
   .pull-quote-section [style*="grid-template-columns"]{grid-template-columns:1fr !important;}
   .pq-item{padding:20px 16px;}
-  .pq-quote{font-size:15px !important;}
+  .pq-quote{font-size:19px !important;}
 
   /* Podcast section */
   section [style*="grid-template-columns:1fr 1fr 1fr"]{grid-template-columns:1fr !important;}
 
   /* Question stack grid */
   .qs-grid{grid-template-columns:1fr !important;}
-  .qs-q{font-size:17px !important;color:rgba(250,247,242,0.95) !important;}
+  .qs-q{font-size:21px !important;color:rgba(250,247,242,0.95) !important;}
 
   /* Switch cards */
   .switch-cards{grid-template-columns:1fr !important;}
@@ -425,7 +426,9 @@ footer{background:var(--dark);padding:56px 48px;}
 
   /* Buttons — full width on mobile */
   .hero-actions{flex-direction:column;gap:12px;}
-  .btn-gold,.btn-outline{font-size:9px !important;letter-spacing:1.5px !important;padding:16px 20px !important;white-space:nowrap !important;}
+  .btn-gold,.btn-outline{font-size:11px !important;letter-spacing:1.5px !important;padding:16px 20px !important;white-space:nowrap !important;}
+  .hero-main-title{font-size:clamp(45px,8.5vw,66px) !important;}
+  .mobile-gold-rule{display:block;}
   .two-books-header{font-size:10px !important;}
   .bs-tier-label{font-size:14px !important;}
   .btn-gold,.btn-outline{width:100%;justify-content:center;padding:16px 20px;}
@@ -461,8 +464,9 @@ footer{background:var(--dark);padding:56px 48px;}
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-left">
-      <div style="font-family:'Cormorant Garamond',serif;font-size:clamp(52px,9vw,84px);font-weight:700;line-height:0.92;color:var(--ink);margin-bottom:16px;animation:fadeUp 0.7s ease both;">The <span style="color:var(--gold);">2.0</span> Method</div>
-      <p style="font-family:'Libre Baskerville',Georgia,serif;font-size:18px;line-height:1.75;color:var(--muted);margin-bottom:20px;max-width:640px;animation:fadeUp 0.7s 0.05s ease both;">Most weight loss programmes address the behaviour. The 2.0 Method addresses what's running it.</p>
+      <div class="hero-main-title" style="font-family:'Cormorant Garamond',serif;font-size:clamp(52px,9vw,84px);font-weight:700;line-height:0.92;color:var(--ink);margin-bottom:16px;animation:fadeUp 0.7s ease both;">The <span style="color:var(--gold);">2.0</span> Method</div>
+      <p style="font-family:'Libre Baskerville',Georgia,serif;font-size:18px;line-height:1.75;color:var(--muted);margin-bottom:12px;max-width:640px;animation:fadeUp 0.7s 0.05s ease both;">Most weight loss programmes address the behaviour. The 2.0 Method addresses what's running it.</p>
+      <div class="mobile-gold-rule" style="width:48px;height:3px;background:#a8813a;margin-bottom:20px;animation:fadeUp 0.7s 0.05s ease both;"></div>
       <h1 class="hero-headline">Intelligence and hard work won't fix this problem.<br><em>Here's why.</em></h1>
       <a href="https://profile.dt.coach" class="btn-gold" style="margin-bottom:28px;animation:fadeUp 0.7s 0.2s ease both;background:var(--gold);color:var(--white);position:relative;overflow:hidden;font-size:11px;padding:22px 40px;min-width:0;width:100%;max-width:380px;letter-spacing:2px;white-space:nowrap;" onmouseover="this.style.background='#151412';this.style.color='#c9a55a';this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 24px rgba(168,129,58,0.35)'" onmouseout="this.style.background='#a8813a';this.style.color='#ffffff';this.style.transform='translateY(0)';this.style.boxShadow='none'">Take the 2.0 Profile Test &nbsp;→</a>
       <p class="hero-sub">This isn't about information. You have enough of that. It's about the part of you that already knows what to do — <strong>and doesn't.</strong> Understanding why that gap exists, and closing it permanently, is what the 2.0 Method was built to do.</p>
@@ -497,20 +501,20 @@ footer{background:var(--dark);padding:56px 48px;}
         <div class="rule-gold"></div>
         <h2 class="problem-headline">The outside-in approach<br><em>never worked.</em><br>It never will.</h2>
         <div class="problem-body">
-          <p>Every programme you've tried has addressed the behaviour. The plan. The protocol. The willpower. None of them addressed what was running the behaviour underneath.</p>
-          <p>That's not your failure. It's the failure of an entire industry solving the wrong problem for decades. <strong>Weight loss is not just an exercise and nutrition problem. It's a psychological one.</strong></p>
-          <p>The behaviour is the symptom. The pattern is the cause. And the pattern lives in a part of the brain that logic, discipline, and calorie tracking simply cannot reach.</p>
-          <p>Until you address that layer — the patterns, the identity, the blind spots...every plan will eventually fail. Not because you're not trying hard enough. Because you're using the wrong tool for the wrong problem.</p>
+          <p>Every programme you've tried addressed the behaviour. The plan, the protocol, the willpower. None of them went underneath it.</p>
+          <p>That's not a failure of effort. It's what happens when the wrong tool is applied to the right problem — by an industry that has spent decades solving the surface and ignoring what's running it.</p>
+          <p>The behaviour is the symptom. The pattern is the cause. And the pattern lives somewhere that logic, discipline, and calorie tracking simply cannot reach.</p>
+          <p>Until you go there — to the patterns, the identity, the blind spots...every plan will eventually fail. Not because of you. Because of the sequence.</p>
         </div>
       </div>
       <div class="problem-right reveal">
         <div class="statement-list">
-          <div class="statement"><div class="statement-check"></div><div class="statement-text">"I know what to do. I just don't do it consistently."</div></div>
-          <div class="statement"><div class="statement-check"></div><div class="statement-text">"I always undo my progress when life gets stressful."</div></div>
-          <div class="statement"><div class="statement-check"></div><div class="statement-text">"I don't understand why this feels so much harder than it should."</div></div>
-          <div class="statement"><div class="statement-check"></div><div class="statement-text">You've succeeded at difficult things professionally. This one feels categorically different.</div></div>
-          <div class="statement"><div class="statement-check"></div><div class="statement-text">You've started again more times than you can count. Each restart feels heavier.</div></div>
-          <div class="statement"><div class="statement-check"></div><div class="statement-text">Nothing is wrong with you. You are not broken. But something has been running the show — and it isn't willpower.</div></div>
+          <div class="statement"><div class="statement-check"></div><div class="statement-text">You've succeeded at different things professionally. This one feels categorically different.</div></div>
+          <div class="statement"><div class="statement-check"></div><div class="statement-text">You know what to do. You just don't do it consistently.</div></div>
+          <div class="statement"><div class="statement-check"></div><div class="statement-text">You don't know why this feels so much harder than it should.</div></div>
+          <div class="statement"><div class="statement-check"></div><div class="statement-text">You always undo your progress when life gets stressful.</div></div>
+          <div class="statement"><div class="statement-check"></div><div class="statement-text">You've tried every approach you know. None of them have held permanently.</div></div>
+          <div class="statement"><div class="statement-check"></div><div class="statement-text">I'm here to tell you there is nothing wrong with you. But something else needs to start running the show — not raw intellect and hard work.</div></div>
         </div>
       </div>
     </div>
@@ -607,7 +611,7 @@ footer{background:var(--dark);padding:56px 48px;}
       <div class="eyebrow">The Framework</div>
       <div class="rule-gold"></div>
       <h2 class="framework-headline">Three components.<br>One sequence.<br><em>The only order that works.</em></h2>
-      <p class="framework-intro">The 2.0 Method is built on twenty years of applied work at the intersection of psychology and behaviour change. Psychology must come before biology. Identity must be rebuilt before habits can stick. This is the sequence that doesn't revert.</p>
+      <p class="framework-intro">Psychology before biology. Identity before habit. Inside before outside. That sequence is non-negotiable — and it's why everything else has been temporary. The 2.0 Method doesn't work around this. It's built on it.</p>
     </div>
     <div class="framework-steps reveal">
       <div class="framework-step">
@@ -615,7 +619,7 @@ footer{background:var(--dark);padding:56px 48px;}
         <div class="step-main">
           <div class="step-tag">Component One · Psychology</div>
           <div class="step-name">The Code</div>
-          <div class="step-desc">The psychological foundation. Three internal commitments that make everything else possible. Without The Code in place, every plan eventually fails — not because of the plan, but because of what's running underneath it. This is where the pattern work begins.</div>
+          <div class="step-desc">Before anything changes on the outside, three internal decisions have to be made. Not goals — decisions. Be your own priority. Do what you say. Be resourceful. Most people have never made these at the level that actually changes behaviour. This is where that begins.</div>
         </div>
         <div class="step-detail">
           <div class="step-detail-label">The Three Commitments</div>
@@ -627,7 +631,7 @@ footer{background:var(--dark);padding:56px 48px;}
         <div class="step-main">
           <div class="step-tag">Component Two · Transformation</div>
           <div class="step-name">The Shift</div>
-          <div class="step-desc">A two-stage transformation. Stage 1 — The Mirror: the pattern becomes undeniable. Stage 2 — The Vision: You 2.0 becomes vivid enough to believe. Not willpower. A genuine change in who you are in relation to this. The results don't revert because the identity has changed.</div>
+          <div class="step-desc">The pattern has to be seen before it can be changed. Stage one (The Mirror) makes it undeniable. Then stage two (The Vision) makes You 2.0 real enough to move toward. Not motivation. Not willpower. A genuine shift in who you are in relation to this. The results don't revert because the identity has changed.</div>
         </div>
         <div class="step-detail">
           <div class="step-detail-label">Two Stages</div>
@@ -639,7 +643,7 @@ footer{background:var(--dark);padding:56px 48px;}
         <div class="step-main">
           <div class="step-tag">Component Three · Biology</div>
           <div class="step-name">The Switch</div>
-          <div class="step-desc">Insulin control first — allowing the body to use fat for fuel. A nourishment-centred approach that eliminates cravings, stabilises energy, and makes losing weight feel like gaining life. The Switch only lands permanently because The Code and The Shift came first.</div>
+          <div class="step-desc">Only after the psychological work is done does the biology begin. Insulin is controlled first — which unlocks the body's ability to use fat for fuel. Energy stabilises. Cravings resolve. Fat loss becomes possible again — not through restriction, but because the body is finally working with you rather than against you.</div>
         </div>
         <div class="step-detail">
           <div class="step-detail-label">The Protocol</div>
@@ -839,8 +843,8 @@ footer{background:var(--dark);padding:56px 48px;}
     <div class="reveal" style="margin-bottom:52px;">
       <div class="eyebrow">The Podcast</div>
       <div class="rule-gold"></div>
-      <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(28px,4vw,44px);font-weight:300;line-height:1.2;color:var(--ink);margin-bottom:16px;">Before the call.<br><em>Start here.</em></h2>
-      <p style="font-size:14px;line-height:1.85;color:var(--muted);max-width:580px;">The podcast takes you through the psychological journey of the 2.0 Method in three parts. Each part has five sessions with mini-worksheets. It's free. And the people who arrive at the diagnostic call having listened are consistently further along — clearer, more honest, more ready.</p>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(28px,4vw,44px);font-weight:300;line-height:1.2;color:var(--ink);margin-bottom:16px;"><em>Start here.</em></h2>
+      <p style="font-size:14px;line-height:1.85;color:var(--muted);max-width:580px;">Book your diagnostic call to discuss your situation and personal journey with your weight to date. We'll uncover what's going on — and in the event neither of my paid programmes are a good fit right now, you'll have free access to my 15-session podcast with worksheets to take you through the complete psychological journey at your own pace. No pressure.</p>
     </div>
     <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:2px;" class="reveal">
       <div style="background:var(--dark);padding:36px 30px;position:relative;">
@@ -897,10 +901,12 @@ footer{background:var(--dark);padding:56px 48px;}
       <p class="prog-sub">Both programmes run the complete 2.0 Method — The Code, The Shift, The Switch, and The Rewrite. The difference is pace, proximity, and depth of access.</p>
     </div>
     <div class="prog-cards reveal">
-      <div class="prog-card">
+      <div class="prog-card" style="position:relative;">
+        <div style="position:absolute;top:-1px;right:28px;background:var(--ink);color:var(--gold);font-family:'Montserrat',sans-serif;font-size:7px;font-weight:700;letter-spacing:3px;padding:5px 14px;border:1px solid var(--gold);">NEW</div>
         <div class="prog-type">Group Programme</div>
         <div class="prog-name">The Inside-Out Programme</div>
         <div class="prog-duration">10 weeks · Cohort of 8–12 · Online</div>
+        <p style="font-family:'Libre Baskerville',serif;font-size:14px;line-height:1.8;color:var(--muted);margin-bottom:20px;">We spend the first three weeks getting honest about what's actually running the behaviour. The next four doing the work that changes it. The final three making sure it holds — not through discipline, but through identity.<br><br>Ten sessions. Ninety minutes each. A cohort small enough for real work. A structure that doesn't revert.</p>
         <ul class="prog-includes">
           <li>10 × 90-minute live group sessions with Darren</li>
           <li>The complete 2.0 Method — The Code, The Shift, The Switch, The Rewrite</li>
@@ -917,6 +923,7 @@ footer{background:var(--dark);padding:56px 48px;}
         <div class="prog-type">1:1 Coaching</div>
         <div class="prog-name">Inside-Out Intensive</div>
         <div class="prog-duration">3 or 6 months · Fully bespoke · Direct access</div>
+        <p style="font-family:'Libre Baskerville',serif;font-size:14px;line-height:1.8;color:rgba(250,247,242,0.7);margin-bottom:20px;">Everything in the group programme — but built entirely around you. Your pattern, your life, your history. Fortnightly sessions, direct WhatsApp access, and a biological protocol tailored to your specific physiology. For people who want to move faster, go deeper, or whose situation needs more than a group container can offer.</p>
         <ul class="prog-includes">
           <li>Fortnightly 60-minute sessions directly with Darren</li>
           <li>Deep behavioural assessment and full pattern profiling</li>
@@ -926,7 +933,7 @@ footer{background:var(--dark);padding:56px 48px;}
           <li>Biological protocol tailored to your history and physiology</li>
           <li>Suitable for clinical complexity — obesity, diabetes, post-bariatric</li>
         </ul>
-        <div class="prog-price">From <strong>£4,000</strong> · 3-month programme</div>
+        <div class="prog-price">From <strong>£4,000</strong> · 3-month or 6-month programme</div>
         <a href="https://tidycal.com/darrentebbenham/diagnostic" class="btn-prog">Book a Diagnostic Call</a>
       </div>
     </div>
@@ -943,18 +950,19 @@ footer{background:var(--dark);padding:56px 48px;}
         <div class="rule-gold"></div>
         <h2 class="outcome-headline">Not just lighter.<br><em>The real you —<br>back.</em></h2>
         <div class="outcome-body">
-          <p>The goal of the 2.0 Method is not a number on a scale. It's the version of you who no longer carries this as a problem. Who is confident again in their own skin. Who enjoys food more, not less.</p>
-          <p>The weight lifts not just from your body but from around your neck — the quiet, persistent burden of a problem that's been there so long it feels like part of who you are.</p>
-          <p><strong>You were never broken. You were never lazy. You were never weak. You were responding exactly as a human brain responds under pressure.</strong> The solution was never stricter control. It was understanding.</p>
+          <p>The goal isn't a number on a scale. It's the version of you who no longer carries this as a problem. Who is confident again in their own skin. Who enjoys food more, not less.</p>
+          <p>The weight lifts not just from your body but from around your neck — the quiet, persistent burden of a problem that's been there so long it started to feel like part of who you are.</p>
+          <p>It isn't. It never was.</p>
+          <p>You were never broken. You were never lazy. You were responding exactly as a human brain responds under pressure. The solution was never stricter control. It was understanding.</p>
           <p>Easy is earned. And once it's earned, it stays.</p>
         </div>
       </div>
       <div class="outcome-right reveal">
         <div class="outcome-cards">
-          <div class="outcome-card"><div class="oc-label">Psychologically</div><div class="oc-text">No longer fighting yourself. The pattern has been seen, named, and changed. Health is not a struggle — it is simply who you are. The negotiation is over.</div></div>
-          <div class="outcome-card"><div class="oc-label">Biologically</div><div class="oc-text">Running on fat, not fear. Energy is high and stable. You lose weight with vitality, not despite it. The biological trap of carbohydrate dependency — broken for good.</div></div>
-          <div class="outcome-card"><div class="oc-label">Daily Life</div><div class="oc-text">Confident again in your own skin. Clothes fit. Food is genuinely enjoyed. Health is no longer the limiting factor in performing at your best in every area of your life.</div></div>
-          <div class="outcome-card"><div class="oc-label">Permanently</div><div class="oc-text">Maintenance requires no willpower — it no longer conflicts with your identity. Consistency becomes who you are, not something you do. You 2.0 isn't a new you. It's the real you — back.</div></div>
+          <div class="outcome-card"><div class="oc-label">Psychologically</div><div class="oc-text">You're not fighting yourself anymore. The pattern has been seen, named, and changed. Health is simply who you are now. The negotiation is over.</div></div>
+          <div class="outcome-card"><div class="oc-label">Biologically</div><div class="oc-text">Running on fat, not fear. Energy is high and stable. You're losing weight with vitality, not despite it. The biological trap that kept you stuck — broken for good.</div></div>
+          <div class="outcome-card"><div class="oc-label">Daily Life</div><div class="oc-text">Confident in your own skin. Clothes fit. Food is genuinely enjoyed — not feared, not negotiated. Health is no longer the thing getting in the way of everything else.</div></div>
+          <div class="outcome-card"><div class="oc-label">Permanently</div><div class="oc-text">Maintenance takes no willpower — it no longer conflicts with who you are. Consistency becomes identity, not effort. You 2.0 isn't a new you. It's the real you — back.</div></div>
         </div>
       </div>
     </div>
@@ -1005,7 +1013,7 @@ footer{background:var(--dark);padding:56px 48px;}
       <div class="eyebrow">The Next Step</div>
       <div class="rule-gold center"></div>
       <h2 class="cta-headline">Book your free<br><em>diagnostic call.</em></h2>
-      <p class="cta-body">Thirty minutes. No pitch. No obligation. You will leave with clarity on exactly what's driving your pattern — and whether the 2.0 Method is the right fit. <strong>Even if we don't work together, the call will be worth your time.</strong></p>
+      <p class="cta-body">Thirty minutes. No pitch. No agenda other than helping you get clear on what's actually going on. You'll leave with clarity on what's driving your pattern — and whether the 2.0 Method is the right fit. <strong>Even if we don't work together, the call will be worth your time.</strong></p>
       <div style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:17px;color:var(--muted);margin-bottom:32px;line-height:1.6;">"When biology is on your side, consistency stops being a personality trait<br>and becomes the natural result."</div>
       <div class="cta-buttons">
         <a href="https://tidycal.com/darrentebbenham/diagnostic" class="btn-gold">Book a Diagnostic Call</a>
