@@ -3,483 +3,492 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Darren Tebbenham · dt.coach</title>
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MCA0MCI+PHJlY3Qgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBmaWxsPSIjMTUxNDEyIi8+PHRleHQgeD0iNyIgeT0iMjgiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjE4IiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0iI2E4ODEzYSI+RFQ8L3RleHQ+PC9zdmc+">
+<title>The Inside-Out Intensive · Programme Detail · Darren Tebbenham</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Montserrat:wght@300;400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink:#151412;--cream:#faf7f2;--bg2:#f3ede3;
-  --dark:#0e0d0b;--dark2:#1a1814;
-  --gold:#a8813a;--gold-light:#c9a55a;--gold-dim:rgba(168,129,58,0.15);
-  --muted:#8a7f6e;--rule:#ddd5c4;--white:#ffffff;
+  --ink:#151412;--cream:#faf7f2;--gold:#a8813a;--gold-light:#c9a55a;
+  --muted:#8a7f6e;--dark:#0e0d0b;--dark2:#1a1814;--bg2:#f3ede3;
+  --rule:#ddd5c4;--white:#ffffff;
 }
-
 *{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{background:var(--cream);color:var(--ink);font-family:'Libre Baskerville',serif;-webkit-font-smoothing:antialiased;}
 
-html{
-  height:100%;
-}
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:14px 48px;display:flex;justify-content:space-between;align-items:center;background:rgba(21,20,18,0.97);backdrop-filter:blur(8px);border-bottom:1px solid rgba(168,129,58,0.2);}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;color:var(--cream);letter-spacing:1px;}
+.nav-logo span{color:var(--gold);}
+.nav-cta{font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--dark);background:var(--gold);border:none;padding:12px 24px;cursor:pointer;transition:all 0.2s;text-decoration:none;display:inline-block;text-align:center;line-height:1;}
+.nav-main{display:block;font-size:11px;font-weight:700;letter-spacing:2px;}
+.nav-sub{display:block;font-size:8px;font-weight:400;letter-spacing:2px;margin-top:4px;color:rgba(14,13,11,0.65);}
+.nav-cta:hover{background:var(--cream);}
+.nav-back{font-family:'Montserrat',sans-serif;font-size:9px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:rgba(250,247,242,0.6);text-decoration:none;transition:color 0.2s;}
+.nav-back:hover{color:var(--gold);}
+.hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;width:36px;height:36px;cursor:pointer;background:none;border:none;padding:4px;z-index:200;}
+.hamburger span{display:block;width:22px;height:1.5px;background:var(--cream);transition:all 0.3s ease;transform-origin:center;}
+.hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg);}
+.hamburger.open span:nth-child(2){opacity:0;transform:scaleX(0);}
+.hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg);}
 
-body{
-  background:var(--dark);
-  color:var(--cream);
-  font-family:'Montserrat',sans-serif;
-  min-height:100vh;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  position:relative;
-  overflow-x:hidden;
-}
+/* MOBILE MENU */
+.mobile-menu{position:fixed;top:0;left:0;right:0;bottom:0;background:var(--dark);z-index:150;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:16px;padding:48px 32px;visibility:hidden;opacity:0;transition:opacity 0.35s ease,visibility 0.35s ease;}
+.mobile-menu.open{visibility:visible;opacity:1;}
+.mobile-menu-inner{display:flex;flex-direction:column;gap:12px;width:100%;max-width:320px;}
+.mob-btn{display:block;text-align:center;font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;padding:20px 24px;text-decoration:none;transition:all 0.2s;width:100%;}
+.mob-btn-gold{background:var(--gold);color:var(--dark);}
+.mob-btn-outline{background:transparent;color:var(--cream);border:1px solid rgba(250,247,242,0.25);}
+.mob-btn-ghost{background:transparent;color:rgba(250,247,242,0.55);border:1px solid rgba(168,129,58,0.3);font-size:9px;letter-spacing:2px;}
+.mob-divider{height:1px;background:rgba(168,129,58,0.2);margin:4px 0;}
+.mob-logo{font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:600;color:rgba(250,247,242,0.3);letter-spacing:1px;text-align:center;margin-top:12px;}
+.mob-logo span{color:rgba(168,129,58,0.6);}
 
-/* ── BACKGROUND TEXTURE ── */
-body::before{
-  content:'';
-  position:fixed;
-  inset:0;
-  background:
-    radial-gradient(ellipse 70% 50% at 10% 50%, rgba(168,129,58,0.06) 0%, transparent 60%),
-    radial-gradient(ellipse 50% 70% at 90% 20%, rgba(168,129,58,0.04) 0%, transparent 55%);
-  pointer-events:none;
-  z-index:0;
-}
+/* HERO */
+.hero{min-height:80vh;background:var(--dark);display:flex;flex-direction:column;justify-content:flex-end;padding:120px 48px 80px;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:repeating-linear-gradient(45deg,transparent,transparent 80px,rgba(168,129,58,0.02) 80px,rgba(168,129,58,0.02) 81px);}
+.hero-rule{width:60px;height:3px;background:var(--gold);margin-bottom:32px;}
+.hero-eyebrow{font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:20px;}
+.hero-headline{font-family:'Cormorant Garamond',serif;font-size:clamp(40px,5.5vw,72px);font-weight:300;line-height:1.1;color:var(--cream);max-width:800px;margin-bottom:24px;}
+.hero-headline em{font-style:italic;color:var(--gold-light);}
+.hero-sub{font-family:'Libre Baskerville',serif;font-size:clamp(15px,1.8vw,18px);line-height:1.85;color:rgba(250,247,242,0.6);max-width:600px;margin-bottom:40px;font-weight:300;}
+.hero-meta{display:flex;gap:40px;flex-wrap:wrap;}
+.hero-meta-item{border-left:2px solid rgba(168,129,58,0.4);padding-left:16px;}
+.hero-meta-label{font-family:'Montserrat',sans-serif;font-size:8px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:4px;}
+.hero-meta-value{font-family:'Cormorant Garamond',serif;font-size:20px;color:var(--cream);font-weight:400;}
 
-/* Fine grain overlay */
-body::after{
-  content:'';
-  position:fixed;
-  inset:0;
-  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
-  pointer-events:none;
-  z-index:0;
-}
+/* SECTION BASE */
+.section-eyebrow{font-family:'Montserrat',sans-serif;font-size:9px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:20px;}
+.section-headline{font-family:'Cormorant Garamond',serif;font-size:clamp(30px,4vw,50px);font-weight:300;line-height:1.2;color:var(--ink);margin-bottom:24px;}
+.section-headline em{font-style:italic;color:var(--gold);}
 
-/* ── TOP & BOTTOM GOLD RULES ── */
-.gold-top{
-  position:fixed;top:0;left:0;right:0;height:2px;
-  background:linear-gradient(90deg,transparent 0%,var(--gold) 30%,var(--gold-light) 50%,var(--gold) 70%,transparent 100%);
-  z-index:10;
-}
-.gold-bottom{
-  position:fixed;bottom:0;left:0;right:0;height:2px;
-  background:linear-gradient(90deg,transparent 0%,var(--gold) 30%,var(--gold-light) 50%,var(--gold) 70%,transparent 100%);
-  z-index:10;
-}
+/* PREMISE */
+.premise{padding:100px 48px;background:var(--cream);}
+.premise-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;}
+.premise-body p{font-size:17px;line-height:1.9;color:var(--ink);margin-bottom:20px;}
+.premise-pull{background:var(--dark2);padding:48px 40px;}
+.premise-pull-text{font-family:'Cormorant Garamond',serif;font-size:24px;font-style:italic;color:var(--cream);line-height:1.6;margin-bottom:24px;}
+.premise-pull-item{padding:16px 0;border-bottom:1px solid rgba(168,129,58,0.15);display:flex;gap:16px;align-items:flex-start;}
+.premise-pull-item:last-child{border-bottom:none;}
+.premise-pull-num{font-family:'Montserrat',sans-serif;font-size:9px;font-weight:700;letter-spacing:2px;color:var(--gold);min-width:20px;padding-top:2px;}
+.premise-pull-copy{font-family:'Montserrat',sans-serif;font-size:11px;line-height:1.7;color:rgba(250,247,242,0.65);letter-spacing:0.5px;}
 
-/* ── MAIN LAYOUT ── */
-.page{
-  position:relative;
-  z-index:2;
-  width:100%;
-  max-width:640px;
-  padding:64px 40px;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-}
+/* PHASES */
+.phases{padding:0 48px 100px;background:var(--cream);}
+.phases-inner{max-width:1100px;margin:0 auto;}
+.phases-header{text-align:center;margin-bottom:60px;padding-top:60px;border-top:1px solid var(--rule);}
+.phase-block{margin-bottom:4px;}
+.phase-header{background:var(--dark2);padding:32px 40px;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:32px;cursor:pointer;transition:background 0.2s;}
+.phase-header:hover{background:var(--dark);}
+.phase-num{font-family:'Cormorant Garamond',serif;font-size:60px;font-weight:300;color:rgba(168,129,58,0.3);line-height:1;}
+.phase-label{font-family:'Montserrat',sans-serif;font-size:8px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:6px;}
+.phase-title{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:400;color:var(--cream);}
+.phase-weeks{font-family:'Montserrat',sans-serif;font-size:9px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:rgba(250,247,242,0.4);}
+.phase-body{background:var(--bg2);padding:40px;display:none;}
+.phase-body.open{display:block;}
+.phase-intro{font-size:16px;line-height:1.85;color:var(--ink);margin-bottom:32px;max-width:700px;}
+.session-list{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--rule);}
+.session-card{background:var(--cream);padding:28px 32px;}
+.session-week{font-family:'Montserrat',sans-serif;font-size:8px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
+.session-name{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:var(--ink);margin-bottom:8px;}
+.session-tag{font-family:'Montserrat',sans-serif;font-size:10px;font-style:italic;color:var(--muted);margin-bottom:12px;}
+.session-desc{font-size:13px;line-height:1.7;color:var(--muted);}
 
-/* ── IDENTITY BLOCK ── */
-.identity{
-  text-align:center;
-  margin-bottom:52px;
-  animation:fadeUp 0.7s ease both;
-}
+/* WHAT'S INCLUDED */
+.included{padding:100px 48px;background:var(--cream);}
+.included-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;}
+.included-list{margin-top:32px;}
+.included-item{display:flex;gap:16px;align-items:flex-start;padding:20px 0;border-bottom:1px solid var(--rule);}
+.included-item:first-child{border-top:1px solid var(--rule);}
+.included-icon{width:32px;height:32px;background:var(--gold);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;}
+.included-icon svg{width:14px;height:14px;fill:var(--dark);}
+.included-title{font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--ink);margin-bottom:4px;}
+.included-copy{font-size:13px;line-height:1.7;color:var(--muted);}
+.included-aside{background:var(--dark2);padding:48px 40px;position:sticky;top:100px;}
+.aside-headline{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;color:var(--cream);margin-bottom:24px;line-height:1.2;}
+.aside-desc{font-size:14px;line-height:1.8;color:rgba(250,247,242,0.65);margin-bottom:32px;}
+.aside-steps{display:grid;gap:0px;background:rgba(168,129,58,0.12);}
+.aside-step{padding:20px 24px;border-bottom:1px solid rgba(168,129,58,0.15);display:flex;gap:16px;align-items:flex-start;}
+.aside-step:last-child{border-bottom:none;}
+.aside-step-num{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:700;color:var(--gold);line-height:1;min-width:28px;}
+.aside-step-copy{font-family:'Montserrat',sans-serif;font-size:10px;line-height:1.6;color:rgba(250,247,242,0.7);letter-spacing:0.5px;}
+.aside-step-copy strong{display:block;color:var(--cream);margin-bottom:2px;font-size:11px;}
+.aside-cta{display:block;text-align:center;background:var(--gold);color:var(--dark);font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;padding:20px;text-decoration:none;margin-top:32px;transition:background 0.2s;}
+.aside-cta:hover{background:var(--gold-light);}
+.aside-cta-sub{text-align:center;font-family:'Montserrat',sans-serif;font-size:9px;color:rgba(250,247,242,0.35);letter-spacing:2px;text-transform:uppercase;margin-top:12px;}
 
-.monogram{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  width:52px;height:52px;
-  border:1px solid rgba(168,129,58,0.4);
-  margin-bottom:24px;
-  position:relative;
-}
-.monogram::before{
-  content:'';
-  position:absolute;
-  inset:3px;
-  border:1px solid rgba(168,129,58,0.15);
-}
-.monogram-text{
-  font-family:'Cormorant Garamond',serif;
-  font-size:20px;
-  font-weight:700;
-  color:var(--gold);
-  letter-spacing:1px;
-}
+/* CTA STRIP */
+.cta-strip{padding:100px 48px;background:var(--dark);}
+.cta-strip-inner{max-width:860px;margin:0 auto;text-align:center;}
+.cta-strip-eyebrow{font-family:'Montserrat',sans-serif;font-size:9px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:20px;}
+.cta-strip-headline{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5vw,60px);font-weight:300;color:var(--cream);line-height:1.15;margin-bottom:24px;}
+.cta-strip-headline em{font-style:italic;color:var(--gold-light);}
+.cta-strip-sub{font-size:16px;line-height:1.8;color:rgba(250,247,242,0.55);margin-bottom:48px;}
+.cta-row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+.btn-gold{display:inline-flex;align-items:center;background:var(--gold);color:var(--dark);font-family:'Montserrat',sans-serif;font-size:9px;font-weight:700;letter-spacing:3px;text-transform:uppercase;padding:20px 36px;border:none;cursor:pointer;transition:all 0.2s;text-decoration:none;}
+.btn-gold:hover{background:var(--gold-light);}
+.btn-outline{display:inline-flex;align-items:center;background:transparent;color:var(--cream);font-family:'Montserrat',sans-serif;font-size:9px;font-weight:700;letter-spacing:3px;text-transform:uppercase;padding:20px 36px;border:1px solid rgba(250,247,242,0.25);cursor:pointer;transition:all 0.2s;text-decoration:none;}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold);}
 
-.name{
-  font-family:'Cormorant Garamond',serif;
-  font-size:clamp(34px,5.5vw,50px);
-  font-weight:600;
-  color:var(--cream);
-  letter-spacing:1px;
-  line-height:1;
-  margin-bottom:10px;
-}
+/* FOOTER */
+footer{background:var(--dark);border-top:1px solid rgba(168,129,58,0.15);padding:32px 48px;text-align:center;}
+.footer-logo{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;color:rgba(168,129,58,0.6);letter-spacing:1px;}
+.footer-copy{font-family:'Montserrat',sans-serif;font-size:10px;color:rgba(250,247,242,0.25);letter-spacing:1px;margin-top:8px;}
 
-.quals{
-  font-size:8px;
-  font-weight:600;
-  letter-spacing:4px;
-  text-transform:uppercase;
-  color:var(--gold);
-  margin-bottom:20px;
-}
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity 0.7s ease,transform 0.7s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
 
-.rule-thin{
-  width:40px;height:1px;
-  background:linear-gradient(90deg,transparent,var(--gold),transparent);
-  margin:0 auto 20px;
-}
-
-.tagline{
-  font-family:'Libre Baskerville',Georgia,serif;
-  font-style:italic;
-  font-size:clamp(14px,2.2vw,17px);
-  font-weight:400;
-  color:rgba(250,247,242,0.5);
-  line-height:1.75;
-}
-
-/* ── CARDS ── */
-.cards{
-  width:100%;
-  display:flex;
-  flex-direction:column;
-  gap:0;
-  margin-bottom:40px;
-  border:1px solid rgba(168,129,58,0.18);
-}
-
-/* Section dividers within cards */
-.cards-section-label{
-  font-size:7px;
-  font-weight:700;
-  letter-spacing:4px;
-  text-transform:uppercase;
-  color:rgba(168,129,58,0.55);
-  padding:14px 24px 8px;
-  background:rgba(168,129,58,0.04);
-  border-bottom:1px solid rgba(168,129,58,0.1);
-  border-top:1px solid rgba(168,129,58,0.1);
-}
-.cards-section-label:first-child{
-  border-top:none;
-}
-
-.card{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:22px 24px;
-  text-decoration:none;
-  background:transparent;
-  transition:background 0.2s ease;
-  position:relative;
-  border-bottom:1px solid rgba(168,129,58,0.1);
-  overflow:hidden;
-  gap:16px;
-}
-.card:last-child{
-  border-bottom:none;
-}
-
-/* Gold sweep on hover */
-.card::after{
-  content:'';
-  position:absolute;
-  top:0;left:-100%;bottom:0;
-  width:100%;
-  background:linear-gradient(90deg,transparent,rgba(168,129,58,0.06),transparent);
-  transition:left 0.4s ease;
-  pointer-events:none;
-}
-.card:hover::after{
-  left:100%;
-}
-
-/* Left gold accent bar */
-.card::before{
-  content:'';
-  position:absolute;
-  top:0;left:0;bottom:0;
-  width:2px;
-  background:var(--gold);
-  transform:scaleY(0);
-  transition:transform 0.25s ease;
-  transform-origin:center;
-}
-.card:hover::before{
-  transform:scaleY(1);
-}
-
-.card:hover{
-  background:rgba(168,129,58,0.06);
-  transform:translateX(3px);
-}
-
-/* Primary card - dark with gold */
-.card.primary{
-  background:rgba(168,129,58,0.1);
-  border-bottom:1px solid rgba(168,129,58,0.15);
-}
-.card.primary:hover{
-  background:rgba(168,129,58,0.16);
-  transform:translateX(3px);
-}
-.card.primary::before{
-  background:var(--gold);
-}
-
-.card-icon{
-  width:36px;height:36px;
-  flex-shrink:0;
-  display:flex;align-items:center;justify-content:center;
-  border:1px solid rgba(168,129,58,0.25);
-  color:var(--gold);
-  font-size:15px;
-  transition:border-color 0.2s,background 0.2s;
-}
-.card:hover .card-icon{
-  border-color:var(--gold);
-  background:rgba(168,129,58,0.07);
-}
-
-.card-body{
-  flex:1;
-  min-width:0;
-}
-.card-label{
-  font-size:7px;
-  font-weight:700;
-  letter-spacing:4px;
-  text-transform:uppercase;
-  color:var(--gold);
-  margin-bottom:5px;
-}
-.card-title{
-  font-family:'Cormorant Garamond',serif;
-  font-size:21px;
-  font-weight:600;
-  color:var(--cream);
-  line-height:1.15;
-  margin-bottom:4px;
-}
-.card-desc{
-  font-family:'Libre Baskerville',Georgia,serif;
-  font-style:italic;
-  font-size:11px;
-  color:rgba(250,247,242,0.42);
-  line-height:1.6;
-}
-.card:hover .card-desc{
-  color:rgba(250,247,242,0.65);
-}
-
-.card-arrow{
-  flex-shrink:0;
-  color:var(--gold);
-  font-size:16px;
-  opacity:0.5;
-  transition:opacity 0.2s,transform 0.2s;
-}
-.card:hover .card-arrow{
-  opacity:1;
-  transform:translateX(3px);
-}
-
-/* ── FOOTER ── */
-.footer{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  gap:8px;
-  animation:fadeUp 0.7s 0.6s ease both;
-  opacity:0;
-}
-.footer-domain{
-  font-family:'Cormorant Garamond',serif;
-  font-size:13px;
-  font-weight:300;
-  letter-spacing:3px;
-  text-transform:uppercase;
-  color:rgba(168,129,58,0.6);
-}
-.footer-copy{
-  font-size:7px;
-  letter-spacing:2px;
-  color:rgba(250,247,242,0.25);
-  text-transform:uppercase;
-}
-.footer-podcast{
-  font-family:'Libre Baskerville',Georgia,serif;
-  font-style:italic;
-  font-size:11px;
-  color:rgba(250,247,242,0.35);
-  margin-top:4px;
-}
-.footer-podcast-link{
-  color:var(--gold);
-  text-decoration:none;
-  border-bottom:1px solid rgba(168,129,58,0.4);
-  transition:color 0.2s,border-color 0.2s;
-}
-.footer-podcast-link:hover{
-  color:var(--gold-light);
-  border-color:var(--gold-light);
-}
-
-/* ── ANIMATIONS ── */
-@keyframes fadeUp{
-  from{opacity:0;transform:translateY(20px)}
-  to{opacity:1;transform:translateY(0)}
-}
-
-.card,.cards-section-label{animation:fadeUp 0.6s ease both;}
-.card-d1{animation-delay:0.15s;}
-.card-d2{animation-delay:0.25s;}
-.card-d3{animation-delay:0.35s;}
-.card-d4{animation-delay:0.45s;}
-.card-d5{animation-delay:0.55s;}
-.card-d6{animation-delay:0.65s;}
-.footer{animation:fadeUp 0.6s 0.75s ease both;}
-
-/* ── MOBILE ── */
-@media(max-width:520px){
-  body{justify-content:flex-start;}
-  .page{padding:48px 20px 56px;}
-  .card{padding:18px 18px;}
-  .card-icon{width:32px;height:32px;font-size:13px;}
-  .monogram{width:44px;height:44px;}
-
-  /* Footer podcast line: revert to 11px, centred, narrow margins */
-  .footer-podcast{font-size:11px;text-align:center;padding:0 12px;}
-
-  /* Section headers: 7px → 11px */
-  .cards-section-label{font-size:11px;letter-spacing:2px;}
-
-  /* Card title (white text): 19px → 22px */
-  .card-title{font-size:22px;}
-
-  /* Card desc (lighter text): 11px → 13px */
-  .card-desc{font-size:13px;}
+/* MOBILE */
+@media(max-width:768px){
+  nav{padding:12px 20px;}
+  .nav-back{display:inline;font-size:8px;letter-spacing:1.5px;color:rgba(250,247,242,0.7);}
+  .nav-cta{display:none !important;}
+  .hamburger{display:none !important;}
+  .hero{padding:100px 24px 60px;min-height:70vh;}
+  .hero-meta{gap:20px;}
+  .premise,.phases,.components,.included,.questions,.biology,.cta-strip{padding:60px 24px;}
+  .phases{padding-bottom:60px;}
+  .premise-inner,.biology-grid,.included-inner{grid-template-columns:1fr;gap:40px;}
+  .components-grid,.q-grid,.session-list{grid-template-columns:1fr;}
+  .phase-header{grid-template-columns:auto 1fr;gap:16px;}
+  .phase-num{font-size:40px;}
+  .phase-title{font-size:22px;}
+  .included-aside{position:static;}
+  footer{padding:24px 20px;}
 }
 </style>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0MCA0MCI+PHJlY3Qgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiBmaWxsPSIjMTUxNDEyIi8+PHRleHQgeD0iNyIgeT0iMjgiIGZvbnQtZmFtaWx5PSJHZW9yZ2lhLHNlcmlmIiBmb250LXNpemU9IjE4IiBmb250LXdlaWdodD0iYm9sZCIgZmlsbD0iI2E4ODEzYSI+RFQ8L3RleHQ+PC9zdmc+">
 </head>
 <body>
 
-<div class="gold-top"></div>
-<div class="gold-bottom"></div>
-
-<div class="page">
-
-  <!-- IDENTITY -->
-  <div class="identity">
-    <div class="monogram"><span class="monogram-text">DT</span></div>
-    <div class="name">Darren Tebbenham</div>
-    <div class="quals">BSc &nbsp;·&nbsp; MSc &nbsp;·&nbsp; Inside-Out Transformation</div>
-    <div class="rule-thin"></div>
-    <div class="tagline">The psychology and biology<br>of permanent weight loss.</div>
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">Darren <span>Tebbenham</span></div>
+  <div style="display:flex;align-items:center;gap:24px;">
+    <a href="https://medical.dt.coach" class="nav-back">← Back to main page</a>
+    <a href="https://tidycal.com/darrentebbenham/diagnostic" class="nav-cta"><span class="nav-main">ARRANGE A CALL</span><span class="nav-sub">Free 30-minute diagnostic</span></a>
+    <button class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
+</nav>
 
-  <!-- DESTINATION CARDS -->
-  <div class="cards">
-
-    <!-- SECTION 0: STRATFORD -->
-    <div class="cards-section-label">For Stratford-upon-Avon &amp; Surrounds</div>
-
-    <a href="https://challenge.gloo.fit" class="card primary card-d1">
-      <div class="card-icon">
-        <svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
-          <text x="50%" y="52%" dominant-baseline="central" text-anchor="middle"
-            font-family="Cormorant Garamond, Georgia, serif"
-            font-size="26"
-            font-weight="700"
-            fill="#a8813a">G</text>
-        </svg>
-      </div>
-      <div class="card-body">
-        <div class="card-label">Inside-Out Challenge</div>
-        <div class="card-title">Ultimate 10 Week Challenge</div>
-        <div class="card-desc">Group Coaching &amp; Studio Training</div>
-      </div>
-      <div class="card-arrow">→</div>
-    </a>
-
-    <!-- SECTION 1: MEDICAL -->
-    <div class="cards-section-label">For GPs, Consultants &amp; Medical Professionals</div>
-
-    <a href="https://medical.dt.coach" class="card primary card-d2">
-      <div class="card-icon">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/>
-        </svg>
-      </div>
-      <div class="card-body">
-        <div class="card-label">The 2.0 Method</div>
-        <div class="card-title">Inside-Out Transformation</div>
-        <div class="card-desc">Personal coaching &amp; how to work with Darren</div>
-      </div>
-      <div class="card-arrow">→</div>
-    </a>
-
-    <a href="https://clinical.dt.coach" class="card card-d3">
-      <div class="card-icon">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
-        </svg>
-      </div>
-      <div class="card-body">
-        <div class="card-label">The Group Programme</div>
-        <div class="card-title">Clinical Referral Pathway</div>
-        <div class="card-desc">Creating change in your community</div>
-      </div>
-      <div class="card-arrow">→</div>
-    </a>
-
-    <a href="https://profile.dt.coach" class="card card-d4">
-      <div class="card-icon">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
-        </svg>
-      </div>
-      <div class="card-body">
-        <div class="card-label">Free Assessment</div>
-        <div class="card-title">Take the 2.0 Profile Assessment</div>
-        <div class="card-desc">Discover your pattern and find your entry point — 2 minutes</div>
-      </div>
-      <div class="card-arrow">→</div>
-    </a>
-
-    <!-- SECTION 2: PERSONAL TRAINERS -->
-    <div class="cards-section-label">For Personal Trainers &amp; Trainees</div>
-
-    <a href="https://www.eifbemore.com" class="card card-d5">
-      <div class="card-icon">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-        </svg>
-      </div>
-      <div class="card-body">
-        <div class="card-label">EIF Train The Trainer</div>
-        <div class="card-title">Master Trainer &nbsp;·&nbsp; Business Coaching</div>
-        <div class="card-desc">Coach education for fitness professionals</div>
-      </div>
-      <div class="card-arrow">→</div>
-    </a>
-
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-inner">
+    <a href="https://tidycal.com/darrentebbenham/diagnostic" class="mob-btn mob-btn-gold">Arrange a Call</a>
+    <a href="https://profile.dt.coach" class="mob-btn mob-btn-outline">Take the Free 2.0 Assessment</a>
+    <div class="mob-divider"></div>
+    <a href="https://medical.dt.coach" class="mob-btn mob-btn-ghost">← Back to Main Page</a>
+    <div class="mob-logo">Darren <span>Tebbenham</span></div>
   </div>
-
-  <!-- FOOTER -->
-  <div class="footer">
-    <div class="footer-domain">dt.coach</div>
-    <div class="footer-copy">© Darren Tebbenham · All rights reserved</div>
-    <div class="footer-podcast">Free access to the Inside-Out Podcast following all <a href="https://tidycal.com/darrentebbenham/diagnostic" class="footer-podcast-link">diagnostic calls</a></div>
-  </div>
-
 </div>
 
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-rule"></div>
+  <div class="hero-eyebrow">The Inside-Out Intensive · Programme Detail</div>
+  <h1 class="hero-headline">Three months.<br>The inside work.<br><em>Permanent change.</em></h1>
+  <p class="hero-sub">This is not a plan or a protocol handed to you. It is a structured process for understanding why the pattern exists - and changing it at the level where it lives.</p>
+  <div class="hero-meta">
+    <div class="hero-meta-item">
+      <div class="hero-meta-label">Duration</div>
+      <div class="hero-meta-value">12 Weeks</div>
+    </div>
+    <div class="hero-meta-item">
+      <div class="hero-meta-label">Sessions</div>
+      <div class="hero-meta-value">6 × 1:1</div>
+    </div>
+    <div class="hero-meta-item">
+      <div class="hero-meta-label">Format</div>
+      <div class="hero-meta-value">Zoom · 1:1</div>
+    </div>
+    <div class="hero-meta-item">
+      <div class="hero-meta-label">Between sessions</div>
+      <div class="hero-meta-value">Direct access · WhatsApp</div>
+    </div>
+  </div>
+</section>
+
+<!-- PREMISE -->
+<section class="premise">
+  <div class="premise-inner">
+    <div class="reveal">
+      <div class="section-eyebrow">Why this works differently</div>
+      <h2 class="section-headline">The pattern isn't<br>a willpower problem.</h2>
+      <div class="premise-body">
+        <p>Every approach you've tried has started in the wrong place. Not because the advice was wrong - but because behaviour change without identity change always fails eventually. You know this. You've lived it.</p>
+        <p>The Inside-Out Intensive starts where the pattern actually lives: in the psychology driving the behaviour, not the behaviour itself. The biology follows - but only after six weeks of inside work, because biology without psychology is always temporary.</p>
+        <p>This is three months of structured, private 1:1 work across six dedicated sessions - with supported practice between each one. Not accountability check-ins. Not meal plans. The actual inside work - done in sequence, at depth, with someone who understands exactly where you are.</p>
+      </div>
+    </div>
+    <div class="premise-pull reveal">
+      <p class="premise-pull-text">"By the end, you are not someone who is managing the problem. You are someone who no longer has it."</p>
+      <div class="premise-pull-item">
+        <span class="premise-pull-num">→</span>
+        <span class="premise-pull-copy">Energy that is stable and reliable - not dependent on willpower or caffeine to get through the day</span>
+      </div>
+      <div class="premise-pull-item">
+        <span class="premise-pull-num">→</span>
+        <span class="premise-pull-copy">A relationship with food that no longer requires negotiation - the pattern is gone, not managed</span>
+      </div>
+      <div class="premise-pull-item">
+        <span class="premise-pull-num">→</span>
+        <span class="premise-pull-copy">A body that reflects the person you already are in every other area of your life</span>
+      </div>
+      <div class="premise-pull-item">
+        <span class="premise-pull-num">→</span>
+        <span class="premise-pull-copy">A 90-day plan that holds - not because you are motivated, but because who you are has changed</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHASES -->
+<section class="phases">
+  <div class="phases-inner">
+    <div class="phases-header reveal">
+      <div class="section-eyebrow">The Structure</div>
+      <h2 class="section-headline">Three phases.<br><em>Six sessions.</em></h2>
+      <p style="font-size:16px;line-height:1.85;color:var(--muted);max-width:580px;margin:0 auto;">The sequence is non-negotiable. Each phase builds directly on the last - which is why the results are different from everything else you've tried.</p>
+    </div>
+
+    <!-- PHASE ONE -->
+    <div class="phase-block reveal">
+      <div class="phase-header" onclick="togglePhase(this)">
+        <div class="phase-num">1</div>
+        <div>
+          <div class="phase-label">Month One · Sessions 1 & 2</div>
+          <div class="phase-title">Awareness</div>
+        </div>
+        <div class="phase-weeks">See the pattern clearly</div>
+      </div>
+      <div class="phase-body open">
+        <p class="phase-intro">Before anything can change, it must be seen - clearly, without the usual story around it. The first two sessions bring the pattern into full focus: its mechanism, its function, and the identity layer that has been sustaining it. No behaviour change required in Phase One. Insight is the deliverable.</p>
+        <div class="session-list">
+          <div class="session-card">
+            <div class="session-week">Session 1</div>
+            <div class="session-name">The Full Diagnostic</div>
+            <div class="session-tag">"The deepest version of the diagnostic. No time pressure. The full picture."</div>
+            <div class="session-desc">Complete pattern profiling using your 2.0 Profile results and the session conversation. Your primary pattern identified, your specific blind spots mapped, and the function of staying stuck established - what it has been protecting. This session sets the psychological baseline and agrees the focus for the three months.</div>
+          </div>
+          <div class="session-card">
+            <div class="session-week">Session 2</div>
+            <div class="session-name">The Identity Layer</div>
+            <div class="session-tag">"Who you have been being in relation to this."</div>
+            <div class="session-desc">Behaviour does not change permanently until identity changes. The gap between current identity and You 2.0 is mapped. The six blind spots examined in full - which ones are yours, and what they have been doing. The identity story interrogated: where it came from, what it is doing, whether it is actually true.</div>
+          </div>
+          <div class="session-card" style="background:var(--bg2);">
+            <div class="session-week" style="color:var(--muted);">Between Sessions</div>
+            <div class="session-name" style="font-size:18px;">The Pattern Journal</div>
+            <div class="session-desc">Fourteen days of noticing without changing. Observe the pattern in real time - triggers, self-talk, aftermath. The writing is not optional. It is how insight becomes usable. WhatsApp access throughout for anything that surfaces.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PHASE TWO -->
+    <div class="phase-block reveal">
+      <div class="phase-header" onclick="togglePhase(this)">
+        <div class="phase-num">2</div>
+        <div>
+          <div class="phase-label">Month Two · Sessions 3 & 4</div>
+          <div class="phase-title">Intervention</div>
+        </div>
+        <div class="phase-weeks">The inside work becomes active</div>
+      </div>
+      <div class="phase-body">
+        <p class="phase-intro">Awareness is not enough. Phase Two is where the inside work becomes active - decisions installed, not aspirations set. The Code goes in. The Shift begins. The biology follows the psychology, because biology without psychology is always temporary.</p>
+        <div class="session-list">
+          <div class="session-card">
+            <div class="session-week">Session 3</div>
+            <div class="session-name">The Code</div>
+            <div class="session-tag">"The three commitments that make everything else possible."</div>
+            <div class="session-desc">Three decisions installed as genuine internal commitments - not rules. Be Your Own Priority: the shift from performing health for others to owning it for yourself. Do What You Say: rebuilding the self-trust that years of starting over has eroded. Be Resourceful: dismantling catastrophising, installing the understanding that setbacks are data. The first visualisation - meeting You 2.0 for the first time in a real, embodied sense.</div>
+          </div>
+          <div class="session-card">
+            <div class="session-week">Session 4</div>
+            <div class="session-name">The Shift & The Switch</div>
+            <div class="session-tag">"You 2.0 becomes real. The biology begins."</div>
+            <div class="session-desc">The Shift: the pattern is named directly, without its story. The comfortable lie gets replaced with accurate thinking. You 2.0 becomes vivid and specific - a reference point the brain begins to treat as real, not a goal to pursue. Then The Switch: the biological protocol introduced. Insulin control explained and personalised to your physiology. The nourishment protocol built around your actual life - not a template.</div>
+          </div>
+          <div class="session-card" style="background:var(--bg2);">
+            <div class="session-week" style="color:var(--muted);">Between Sessions</div>
+            <div class="session-name" style="font-size:18px;">The Code & The Switch</div>
+            <div class="session-desc">Daily Code Check-In - five minutes each morning. The letter from You 2.0 read every day. The biological protocol begun: track energy, hunger, and mood. Not weight. WhatsApp access for in-the-moment questions about the protocol or anything that surfaces.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PHASE THREE -->
+    <div class="phase-block reveal">
+      <div class="phase-header" onclick="togglePhase(this)">
+        <div class="phase-num">3</div>
+        <div>
+          <div class="phase-label">Month Three · Sessions 5 & 6</div>
+          <div class="phase-title">Integration</div>
+        </div>
+        <div class="phase-weeks">Embed the change as identity</div>
+      </div>
+      <div class="phase-body">
+        <p class="phase-intro">The pattern does not change permanently until it is replaced at the identity level. Phase Three is where consistency becomes who you are - not something you are trying to do. Triggers mapped. The Rewrite installed. The 12-month roadmap built before you leave.</p>
+        <div class="session-list">
+          <div class="session-card">
+            <div class="session-week">Session 5</div>
+            <div class="session-name">The Rewrite</div>
+            <div class="session-tag">"Consistency becomes who you are - not something you do."</div>
+            <div class="session-desc">Identity evidence gathered - what has shifted across five sessions, named and owned. Habit anchors defined: the one non-negotiable that holds when life becomes demanding. Triggers mapped, pre-decided protocols installed for the situations that have historically broken the pattern. Continuity over perfection established as the operating principle. The Rewrite written: who you are now, present tense, evidence behind every line.</div>
+          </div>
+          <div class="session-card">
+            <div class="session-week">Session 6</div>
+            <div class="session-name">The Long Game</div>
+            <div class="session-tag">"What permanent actually looks like."</div>
+            <div class="session-desc">All four components consolidated. Your minimum effective dose defined - the simplest version of the protocol that holds when life is at its most demanding. The pattern will return: this is expected, not failure. A letter written in session as You 2.0 - to be opened in six months. The 12-month roadmap built before you leave: three commitments, one focus, clear next milestones.</div>
+          </div>
+          <div class="session-card" style="background:var(--bg2);">
+            <div class="session-week" style="color:var(--muted);">After the programme</div>
+            <div class="session-name" style="font-size:18px;">The work continues</div>
+            <div class="session-desc">All session recordings shared within 24 hours - accessible for six months. Session summaries sent after every call. The 12-month roadmap as your working document. The long game does not end at Session 6.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT'S INCLUDED -->
+<section class="included">
+  <div class="included-inner">
+    <div>
+      <div class="reveal">
+        <div class="section-eyebrow">What's included</div>
+        <h2 class="section-headline">Everything you need.<br><em>Nothing you don't.</em></h2>
+      </div>
+      <div class="included-list">
+        <div class="included-item reveal">
+          <div class="included-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+          <div>
+            <div class="included-title">6 × 60-minute 1:1 sessions</div>
+            <div class="included-copy">Fortnightly, via Zoom. Structured around the programme and entirely responsive to what is actually happening for you. Recorded and shared within 24 hours - accessible for six months.</div>
+          </div>
+        </div>
+        <div class="included-item reveal">
+          <div class="included-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+          <div>
+            <div class="included-title">Full 2.0 Profile assessment and profiling</div>
+            <div class="included-copy">Completed before Session 1. Your pattern identified, your blind spots mapped, the programme sequenced around your specific psychology - not a template.</div>
+          </div>
+        </div>
+        <div class="included-item reveal">
+          <div class="included-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+          <div>
+            <div class="included-title">WhatsApp access throughout</div>
+            <div class="included-copy">Monday to Friday, 9am–6pm. For in-the-moment pattern moments, questions about the biological protocol, and brief check-ins on the between-session work. When something surfaces, you have somewhere to bring it.</div>
+          </div>
+        </div>
+        <div class="included-item reveal">
+          <div class="included-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+          <div>
+            <div class="included-title">Personalised biological protocol</div>
+            <div class="included-copy">Built around your history, your physiology, and your actual week. Introduced at Session 4 - after the psychological foundation is in place. Not a diet. A metabolic instruction built for your life.</div>
+          </div>
+        </div>
+        <div class="included-item reveal">
+          <div class="included-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+          <div>
+            <div class="included-title">Session summaries within 24 hours</div>
+            <div class="included-copy">A written summary after every session - the key shifts, the commitments made, the between-session focus. What was agreed stays clear.</div>
+          </div>
+        </div>
+        <div class="included-item reveal">
+          <div class="included-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></div>
+          <div>
+            <div class="included-title">12-month roadmap</div>
+            <div class="included-copy">Built in Session 6. Three commitments, one focus, your minimum effective dose. Specific enough that you know exactly what you are doing on Day 1 after the programme ends. The long game, written down.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="included-item reveal" style="border-top:1px solid var(--rule);margin-top:32px;padding-top:32px;border-bottom:none;">
+        <div>
+          <div class="included-title" style="margin-bottom:12px;">After the programme</div>
+          <div class="included-copy">The programme ends. The work does not. For those who want continued support, monthly maintenance sessions are available - to recalibrate, address what has surfaced, and keep the long game on track. Discuss this at any point during or after the three months.</div>
+        </div>
+      </div>
+    </div>
+    <div class="included-aside reveal">
+      <div class="aside-headline">The diagnostic call</div>
+      <div class="aside-desc">Free. 30 minutes. This is where it begins - and it is worth the time whether you go further or not.</div>
+      <div class="aside-steps">
+        <div class="aside-step">
+          <div class="aside-step-num">1</div>
+          <div class="aside-step-copy"><strong>Why you're still struggling</strong>A clear understanding of the specific pattern running the behaviour - and why every previous approach has been temporary.</div>
+        </div>
+        <div class="aside-step">
+          <div class="aside-step-num">2</div>
+          <div class="aside-step-copy"><strong>How the programme works</strong>The full Inside-Out Method explained - the sequence, the sessions, what changes and why it holds.</div>
+        </div>
+        <div class="aside-step">
+          <div class="aside-step-num">3</div>
+          <div class="aside-step-copy"><strong>Whether this is the right fit</strong>An honest conversation about what you need and whether this is it. No pressure either way.</div>
+        </div>
+      </div>
+      <a href="https://tidycal.com/darrentebbenham/diagnostic" class="aside-cta">ARRANGE THE DIAGNOSTIC CALL</a>
+      <div class="aside-cta-sub">Free · 30 minutes · No obligation</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA STRIP -->
+<section class="cta-strip">
+  <div class="cta-strip-inner reveal">
+    <div class="cta-strip-eyebrow">Ready to begin</div>
+    <h2 class="cta-strip-headline">Three months from now,<br>you could be <em>someone who no longer carries this.</em></h2>
+    <p class="cta-strip-sub">The diagnostic call is free. Thirty minutes. It is not a sales process - it is the beginning of understanding what is actually happening and whether this is the right fit.</p>
+    <div class="cta-row">
+      <a href="https://tidycal.com/darrentebbenham/diagnostic" class="btn-gold">Arrange the Diagnostic Call</a>
+      <a href="https://profile.dt.coach" class="btn-outline">Take the Free 2.0 Assessment</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">dt.coach</div>
+  <div class="footer-copy">© Darren Tebbenham · The Inside-Out Programme · The 2.0 Method</div>
+</footer>
+
+<script>
+// Accordion
+function togglePhase(header) {
+  const body = header.nextElementSibling;
+  const isOpen = body.classList.contains('open');
+  document.querySelectorAll('.phase-body').forEach(b => b.classList.remove('open'));
+  if (!isOpen) body.classList.add('open');
+}
+
+// Reveal on scroll
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); observer.unobserve(e.target); } });
+}, {threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Hamburger
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('open');
+  mobileMenu.classList.toggle('open');
+  document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+});
+mobileMenu.addEventListener('click', (e) => {
+  if(e.target === mobileMenu) {
+    hamburger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+});
+</script>
 </body>
 </html>
